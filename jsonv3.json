@@ -1,0 +1,2219 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "OpenAPI definition",
+        "version": "v0"
+    },
+    "servers": [
+        {
+            "url": "https://simba-dev4.k8s.caas.ca-sa.gca/api/backend",
+            "description": "Generated server url"
+        }
+    ],
+    "paths": {
+        "/report/products": {
+            "get": {
+                "tags": [
+                    "reports-controller"
+                ],
+                "operationId": "getAllProducts_3",
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "reports-controller"
+                ],
+                "operationId": "getAllProducts_5",
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "reports-controller"
+                ],
+                "operationId": "getAllProducts_4",
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "reports-controller"
+                ],
+                "operationId": "getAllProducts_6",
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "options": {
+                "tags": [
+                    "reports-controller"
+                ],
+                "operationId": "getAllProducts",
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "head": {
+                "tags": [
+                    "reports-controller"
+                ],
+                "operationId": "getAllProducts_2",
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "reports-controller"
+                ],
+                "operationId": "getAllProducts_1",
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ecoptztaxspreadaggyearlymef/{crcode}/{dateTreatment}": {
+            "get": {
+                "tags": [
+                    "fiscal-tax-spread-total-amount-per-mef-year-controller"
+                ],
+                "operationId": "getMontantPerMEFYear",
+                "parameters": [
+                    {
+                        "name": "crcode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "dateTreatment",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/EcoPtzTaxSpreadAggYearlyMEF"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ecoptztaxspreadaggyearlymef/{dateTreatment}": {
+            "get": {
+                "tags": [
+                    "fiscal-tax-spread-total-amount-per-mef-year-controller"
+                ],
+                "operationId": "getMontantPerMEFYearAllCR",
+                "parameters": [
+                    {
+                        "name": "dateTreatment",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/EcoPtzTaxSpreadAggYearlyMEF"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ecoptztaxspreaddistributedservice/{crcode}/{currentdate}/{dateTreatment}": {
+            "get": {
+                "tags": [
+                    "fiscal-tax-spread-total-amount-per-mef-year-controller"
+                ],
+                "operationId": "getDistributedMontantPerYear",
+                "parameters": [
+                    {
+                        "name": "crcode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "currentdate",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "dateTreatment",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/EcoPtzTaxSpreadDistributed"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ecoptztaxspreaddistributedservice/{currentdate}/{dateTreatment}": {
+            "get": {
+                "tags": [
+                    "fiscal-tax-spread-total-amount-per-mef-year-controller"
+                ],
+                "operationId": "getDistributedMontantPerYearAllCR",
+                "parameters": [
+                    {
+                        "name": "currentdate",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "dateTreatment",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/EcoPtzTaxSpreadDistributed"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/downgradings/cancel": {
+            "post": {
+                "tags": [
+                    "downgrading-controller"
+                ],
+                "operationId": "cancel",
+                "parameters": [
+                    {
+                        "name": "simba-id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "simba-ts",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/downgradings": {
+            "get": {
+                "tags": [
+                    "downgrading-controller"
+                ],
+                "operationId": "getAll",
+                "parameters": [
+                    {
+                        "name": "crcode",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "operationCode",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/DowngradingMovementDto"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "downgrading-controller"
+                ],
+                "operationId": "create",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/DowngradingDto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/parameters": {
+            "get": {
+                "tags": [
+                    "parameter-controller"
+                ],
+                "operationId": "getAll_1",
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Parameter"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "parameter-controller"
+                ],
+                "operationId": "update",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Parameter"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/lastAliveModifications/{crcode}/{nopret}": {
+            "get": {
+                "tags": [
+                    "ar-controller"
+                ],
+                "operationId": "getLastModificationMouvements",
+                "parameters": [
+                    {
+                        "name": "crcode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nopret",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/EcoPtz"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/lastAliveMouvements/{crcode}/{nopret}": {
+            "get": {
+                "tags": [
+                    "ar-controller"
+                ],
+                "operationId": "getLastAliveMouvements",
+                "parameters": [
+                    {
+                        "name": "crcode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nopret",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/EcoPtz"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/loansbycrcodeandoperation/{crcode}/{operationCode}": {
+            "get": {
+                "tags": [
+                    "loan-consultation-controller"
+                ],
+                "operationId": "getLoansByCodeCrAndOperationCode",
+                "parameters": [
+                    {
+                        "name": "crcode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "operationCode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/loan-details/latest": {
+            "get": {
+                "tags": [
+                    "loan-consultation-controller"
+                ],
+                "operationId": "getLatestLoansByCodeCrAndOperationCode",
+                "parameters": [
+                    {
+                        "name": "crcode",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "operationCode",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/loan-details": {
+            "get": {
+                "tags": [
+                    "loan-consultation-controller"
+                ],
+                "operationId": "getLatestLoansByCodeCrAndOperationCode_1",
+                "parameters": [
+                    {
+                        "name": "simba-id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "simba-ts",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/loansbycodecr/{crcode}": {
+            "get": {
+                "tags": [
+                    "loan-consultation-controller"
+                ],
+                "operationId": "getLoansByCrCode",
+                "parameters": [
+                    {
+                        "name": "crcode",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "default": "codeCr"
+                        }
+                    },
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "default": "desc"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32",
+                            "default": 0
+                        }
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32",
+                            "default": 10
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/taxfiscalspreadforloan": {
+            "get": {
+                "tags": [
+                    "loan-consultation-controller"
+                ],
+                "operationId": "taxSpread",
+                "parameters": [
+                    {
+                        "name": "crcode",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "operationCode",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nopret",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/tax-fiscal-spread": {
+            "get": {
+                "tags": [
+                    "loan-consultation-controller"
+                ],
+                "operationId": "taxSpread_1",
+                "parameters": [
+                    {
+                        "name": "simbaId",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "movement",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/loan-by-simbaid": {
+            "get": {
+                "tags": [
+                    "loan-consultation-controller"
+                ],
+                "operationId": "loanBySimbaId",
+                "parameters": [
+                    {
+                        "name": "simbaId",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/loan-early-repayment": {
+            "get": {
+                "tags": [
+                    "loan-consultation-controller"
+                ],
+                "operationId": "loanEarlyRepayment",
+                "parameters": [
+                    {
+                        "name": "simbaId",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/reporting/{reportType}/{codeCrs}": {
+            "get": {
+                "tags": [
+                    "report-generator-controller"
+                ],
+                "operationId": "getReport",
+                "parameters": [
+                    {
+                        "name": "reportType",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "codeCrs",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/treatment-details": {
+            "get": {
+                "tags": [
+                    "treatment-detail-property-controller"
+                ],
+                "operationId": "getAll_2",
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/treatment-details/{user}": {
+            "post": {
+                "tags": [
+                    "treatment-detail-property-controller"
+                ],
+                "operationId": "updateEnrichment",
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TreatmentDetailProperty"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/loan-rate": {
+            "get": {
+                "tags": [
+                    "actual-spread-controller"
+                ],
+                "operationId": "loanRateBySimbaId",
+                "parameters": [
+                    {
+                        "name": "simbaId",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/actual-spread-loan": {
+            "get": {
+                "tags": [
+                    "actual-spread-controller"
+                ],
+                "operationId": "loanDetails",
+                "parameters": [
+                    {
+                        "name": "simbaId",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "period",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/actual-spread-loan-details": {
+            "get": {
+                "tags": [
+                    "actual-spread-controller"
+                ],
+                "operationId": "loanDetailsActualSpread",
+                "parameters": [
+                    {
+                        "name": "simbaId",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/cr": {
+            "get": {
+                "tags": [
+                    "simba-event-status-controller"
+                ],
+                "operationId": "getAllCr",
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/movements/cr/{cr}": {
+            "get": {
+                "tags": [
+                    "simba-event-status-controller"
+                ],
+                "operationId": "getMovementsByCr",
+                "parameters": [
+                    {
+                        "name": "cr",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/movement": {
+            "get": {
+                "tags": [
+                    "simba-event-status-controller"
+                ],
+                "operationId": "findBySimbaIdAndLabel",
+                "parameters": [
+                    {
+                        "name": "simab-id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "movement",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/movement/{simab-id}": {
+            "get": {
+                "tags": [
+                    "simba-event-status-controller"
+                ],
+                "operationId": "findBySimbaIdAndTs",
+                "parameters": [
+                    {
+                        "name": "simab-id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "simab-ts",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/movement/details": {
+            "get": {
+                "tags": [
+                    "simba-event-status-controller"
+                ],
+                "operationId": "findMovementDetailsBySimbaIdAndTs",
+                "parameters": [
+                    {
+                        "name": "simba-id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "simba-ts",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/movements": {
+            "get": {
+                "tags": [
+                    "simba-event-status-controller"
+                ],
+                "operationId": "getMovementsByCodeCrAndOperationCode",
+                "parameters": [
+                    {
+                        "name": "crcode",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "operationCode",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nopret",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/movements/simab-id/{simab-id}": {
+            "get": {
+                "tags": [
+                    "simba-event-status-controller"
+                ],
+                "operationId": "getMovementsByCodeCrAndOperationCode_1",
+                "parameters": [
+                    {
+                        "name": "simab-id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/movements/all": {
+            "get": {
+                "tags": [
+                    "simba-event-status-controller"
+                ],
+                "operationId": "getAllMovements",
+                "parameters": [
+                    {
+                        "name": "codecr",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "operation",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "status",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "mode",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "default": "codeCr"
+                        }
+                    },
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "default": "desc"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32",
+                            "default": 0
+                        }
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32",
+                            "default": 10
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/movement/flux": {
+            "get": {
+                "tags": [
+                    "simba-event-status-controller"
+                ],
+                "operationId": "getFluxDetailsForMovement",
+                "parameters": [
+                    {
+                        "name": "simbaId",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "simbaTs",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "codeTypeflux",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/flux/search": {
+            "post": {
+                "tags": [
+                    "simba-event-status-controller"
+                ],
+                "operationId": "getFlux",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/FluxRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "default response",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "EcoPtzTaxSpreadAggYearlyMEF": {
+                "type": "object",
+                "properties": {
+                    "mefYear": {
+                        "type": "string"
+                    },
+                    "amount": {
+                        "type": "number",
+                        "format": "double"
+                    }
+                }
+            },
+            "EcoPtzTaxSpreadDistributed": {
+                "type": "object",
+                "properties": {
+                    "mefYear": {
+                        "type": "string"
+                    },
+                    "spreadYear": {
+                        "type": "string"
+                    },
+                    "amount": {
+                        "type": "number",
+                        "format": "double"
+                    }
+                }
+            },
+            "ControlStatus": {
+                "type": "object",
+                "properties": {
+                    "simbaId": {
+                        "type": "string"
+                    },
+                    "simbaTs": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "controlStatusCode": {
+                        "type": "string"
+                    },
+                    "source": {
+                        "type": "string"
+                    },
+                    "controlTs": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                }
+            },
+            "DowngradingDto": {
+                "type": "object",
+                "properties": {
+                    "simbaId": {
+                        "type": "string"
+                    },
+                    "simbaTsEz": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "simbaTs": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "mntEcoPert": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "dateDeclassement": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "dateEventment": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "typeInfraction": {
+                        "type": "string"
+                    },
+                    "creditImpotApresSanction": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "creditImpotRedresser": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "creditImpotAnnuler": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "simbaDateTraitementMensuelle": {
+                        "type": "string"
+                    },
+                    "controlStatus": {
+                        "$ref": "#/components/schemas/ControlStatus"
+                    }
+                }
+            },
+            "DowngradingMovementDto": {
+                "type": "object",
+                "properties": {
+                    "simbaId": {
+                        "type": "string"
+                    },
+                    "simbaTs": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "codeCr": {
+                        "type": "string"
+                    },
+                    "operation": {
+                        "type": "string"
+                    },
+                    "noPret": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "dateMiseEnForcePret": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "mntCreditImpot": {
+                        "type": "number"
+                    },
+                    "initialMintEcoPret": {
+                        "type": "number"
+                    },
+                    "mntEcoPret": {
+                        "type": "number"
+                    },
+                    "downgrading": {
+                        "$ref": "#/components/schemas/DowngradingDto"
+                    }
+                }
+            },
+            "Parameter": {
+                "type": "object",
+                "properties": {
+                    "category": {
+                        "type": "string"
+                    },
+                    "code": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "refParametersType": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "orderId": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                }
+            },
+            "CaisseRegional": {
+                "type": "object",
+                "properties": {
+                    "codeCr": {
+                        "type": "string"
+                    },
+                    "label": {
+                        "type": "string"
+                    }
+                }
+            },
+            "EcoPtz": {
+                "type": "object",
+                "properties": {
+                    "simbaId": {
+                        "type": "string"
+                    },
+                    "simbaTs": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "contractAgreementId": {
+                        "type": "string"
+                    },
+                    "codeCr": {
+                        "type": "string"
+                    },
+                    "operation": {
+                        "type": "string"
+                    },
+                    "noPret": {
+                        "type": "string"
+                    },
+                    "identifiantPret": {
+                        "type": "string"
+                    },
+                    "dateEmissionOffrePret": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "dateAcceptationOffrePret": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "dateMiseEnForcePret": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "dateCloturePret": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "dateReversementdeAvantageIndu": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "dateEmissionComplementaire": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "dateTraitement": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "dateReceptionDeclaration": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "codePresentateur": {
+                        "type": "string"
+                    },
+                    "codeApplicationReceptrice": {
+                        "type": "string"
+                    },
+                    "codeEtablissement": {
+                        "type": "string"
+                    },
+                    "codeTypeFlux": {
+                        "type": "string"
+                    },
+                    "dateEmissionCr": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "noFichier": {
+                        "type": "number"
+                    },
+                    "typeEnregistrement": {
+                        "type": "string"
+                    },
+                    "codeEtape": {
+                        "type": "string"
+                    },
+                    "precedentCodeEtape": {
+                        "type": "string"
+                    },
+                    "codeMouvement": {
+                        "type": "string"
+                    },
+                    "codeInseeCommuneLogement": {
+                        "type": "string"
+                    },
+                    "codePostalLogement": {
+                        "type": "string"
+                    },
+                    "villeLogement": {
+                        "type": "string"
+                    },
+                    "anneeAchevementDepotDom2015": {
+                        "type": "number"
+                    },
+                    "natureLogement": {
+                        "type": "string"
+                    },
+                    "occupationLogement": {
+                        "type": "string"
+                    },
+                    "categorieProprietaire": {
+                        "type": "string"
+                    },
+                    "commanditaireDesTravaux": {
+                        "type": "string"
+                    },
+                    "typeTravaux": {
+                        "type": "string"
+                    },
+                    "mtTtcTravauxPerfRehab": {
+                        "type": "number"
+                    },
+                    "mtTtcTravauxInduits": {
+                        "type": "number"
+                    },
+                    "mtTtcFraisEtude": {
+                        "type": "number"
+                    },
+                    "mtTotalTtcDesTravaux": {
+                        "type": "number"
+                    },
+                    "subventionRecue": {
+                        "type": "string"
+                    },
+                    "mntSubvention": {
+                        "type": "number"
+                    },
+                    "dureeEcoPret": {
+                        "type": "number"
+                    },
+                    "mntEcoPret": {
+                        "type": "number"
+                    },
+                    "tauxCreditImpot": {
+                        "type": "number"
+                    },
+                    "revenuFiscalRefProprietaire": {
+                        "type": "number"
+                    },
+                    "anneeRfr": {
+                        "type": "number"
+                    },
+                    "typeSureteEcoPret": {
+                        "type": "string"
+                    },
+                    "mntAutrePret1": {
+                        "type": "number"
+                    },
+                    "tauxNominalAutrePret1": {
+                        "type": "number"
+                    },
+                    "typeTauxAutrePret1": {
+                        "type": "string"
+                    },
+                    "dureeAutrePret1": {
+                        "type": "number"
+                    },
+                    "natureAutrePret1": {
+                        "type": "string"
+                    },
+                    "mntAutrePret2": {
+                        "type": "number"
+                    },
+                    "tauxNominalAutrePret2": {
+                        "type": "number"
+                    },
+                    "typeTauxAutrePret2": {
+                        "type": "string"
+                    },
+                    "dureeAutrePret2": {
+                        "type": "number"
+                    },
+                    "natureAutrePret2": {
+                        "type": "string"
+                    },
+                    "mntAutresPretsApresDeuxieme": {
+                        "type": "number"
+                    },
+                    "mntChargeMRembtPretsPreex": {
+                        "type": "number"
+                    },
+                    "revenuAnnuelNet": {
+                        "type": "number"
+                    },
+                    "chargesEnMEstimeesAvTravaux": {
+                        "type": "number"
+                    },
+                    "chargesEnMEstimeesApTravaux": {
+                        "type": "number"
+                    },
+                    "augmMensualiteEcoptz": {
+                        "type": "number"
+                    },
+                    "coutTotalTtcAction1": {
+                        "type": "number"
+                    },
+                    "isolationComblesPerdus": {
+                        "type": "number"
+                    },
+                    "isolationComblesAmenages": {
+                        "type": "number"
+                    },
+                    "toitureTerrasseValeurR": {
+                        "type": "number"
+                    },
+                    "noSiretEntrepriseTravaux1": {
+                        "type": "string"
+                    },
+                    "coutTotalTtcAction2": {
+                        "type": "number"
+                    },
+                    "isolationDesMursValeurR": {
+                        "type": "number"
+                    },
+                    "noSiretEntrepriseTravaux2": {
+                        "type": "string"
+                    },
+                    "coutTotalTtcAction4": {
+                        "type": "number"
+                    },
+                    "poseFenetresValeurUw": {
+                        "type": "number"
+                    },
+                    "poseFenetresVolets": {
+                        "type": "number"
+                    },
+                    "poseDoublesFenetresValeurUw": {
+                        "type": "number"
+                    },
+                    "noSiretEntrepriseTravaux4": {
+                        "type": "string"
+                    },
+                    "coutTotalTtcAction5": {
+                        "type": "number"
+                    },
+                    "natureAction": {
+                        "type": "string"
+                    },
+                    "pompeAChaleurValeurCop": {
+                        "type": "number"
+                    },
+                    "noSiretEntrepriseTravaux5": {
+                        "type": "string"
+                    },
+                    "coutTotalTtcAction6": {
+                        "type": "number"
+                    },
+                    "classeChaudiereBois": {
+                        "type": "number"
+                    },
+                    "rendementPoele": {
+                        "type": "number"
+                    },
+                    "noSiretEntrepriseTravaux6": {
+                        "type": "string"
+                    },
+                    "coutTotalTtcAction7": {
+                        "type": "number"
+                    },
+                    "noSiretEntrepriseTravaux7": {
+                        "type": "string"
+                    },
+                    "zoneClimatique": {
+                        "type": "string"
+                    },
+                    "altitudeTerrain": {
+                        "type": "string"
+                    },
+                    "consoAvTravaux": {
+                        "type": "number"
+                    },
+                    "consoApTravaux": {
+                        "type": "number"
+                    },
+                    "dispositifAssainissement": {
+                        "type": "string"
+                    },
+                    "isolationPlancherCombles": {
+                        "type": "string"
+                    },
+                    "isolationToitureCombles": {
+                        "type": "string"
+                    },
+                    "isolationToitureTerrasse": {
+                        "type": "string"
+                    },
+                    "isolationMurs": {
+                        "type": "string"
+                    },
+                    "remplacementFenetres": {
+                        "type": "string"
+                    },
+                    "remplacementFenetresToitures": {
+                        "type": "string"
+                    },
+                    "poseRemplctFenetre2": {
+                        "type": "string"
+                    },
+                    "poseVitragesAfaibleEmissivite": {
+                        "type": "string"
+                    },
+                    "poseChaudiereCondensHpe": {
+                        "type": "string"
+                    },
+                    "poseChaudiereMicrocogenGaz": {
+                        "type": "string"
+                    },
+                    "posePompeChaleurAirEau": {
+                        "type": "string"
+                    },
+                    "posePompeChaleurGeothermique": {
+                        "type": "string"
+                    },
+                    "poseRaccordementReseauChaleur": {
+                        "type": "string"
+                    },
+                    "poseChaudiereBois": {
+                        "type": "string"
+                    },
+                    "poseSystemeChauffageBois": {
+                        "type": "string"
+                    },
+                    "poseChauffageHydrauliqSolaire": {
+                        "type": "string"
+                    },
+                    "installationEauChdeSanitaire": {
+                        "type": "string"
+                    },
+                    "posePompeChEauChdeSanitaire": {
+                        "type": "string"
+                    },
+                    "poseFournitEauChdeSanitaire": {
+                        "type": "string"
+                    },
+                    "mntReverseEmprunteur": {
+                        "type": "number"
+                    },
+                    "mntAvantageInduAvecMaj": {
+                        "type": "number"
+                    },
+                    "nomEmprunteur": {
+                        "type": "string"
+                    },
+                    "prenomEmprunteur": {
+                        "type": "string"
+                    },
+                    "civiliteEmprunteur": {
+                        "type": "string"
+                    },
+                    "adresse1": {
+                        "type": "string"
+                    },
+                    "adresse2": {
+                        "type": "string"
+                    },
+                    "adresse3": {
+                        "type": "string"
+                    },
+                    "adresse4": {
+                        "type": "string"
+                    },
+                    "codePostal": {
+                        "type": "string"
+                    },
+                    "localite": {
+                        "type": "string"
+                    },
+                    "nomCoEmprunteur": {
+                        "type": "string"
+                    },
+                    "prenomCoEmprunteur": {
+                        "type": "string"
+                    },
+                    "civiliteCoEmprunteur": {
+                        "type": "string"
+                    },
+                    "codePays": {
+                        "type": "string"
+                    },
+                    "situationFamille": {
+                        "type": "string"
+                    },
+                    "nombrePersonnesMenage": {
+                        "type": "number"
+                    },
+                    "rfr": {
+                        "type": "number"
+                    },
+                    "codeCsp": {
+                        "type": "string"
+                    },
+                    "tegPret": {
+                        "type": "number"
+                    },
+                    "mntParticipationComplementaire": {
+                        "type": "string"
+                    },
+                    "typeEcoPret": {
+                        "type": "string"
+                    },
+                    "systemeProtectionToiture": {
+                        "type": "string"
+                    },
+                    "installationSurtoitureVentilee": {
+                        "type": "string"
+                    },
+                    "installationParesoleilHorz": {
+                        "type": "string"
+                    },
+                    "installationBardageVentile": {
+                        "type": "string"
+                    },
+                    "coutTotalTtcAction3": {
+                        "type": "number"
+                    },
+                    "isolationDesPlanchersBas": {
+                        "type": "string"
+                    },
+                    "noSiretEntrepriseTravaux3": {
+                        "type": "string"
+                    },
+                    "poseProtectionsSolaires": {
+                        "type": "string"
+                    },
+                    "poseChaudiereHpe": {
+                        "type": "string"
+                    },
+                    "poseRaccordementReseauFroid": {
+                        "type": "string"
+                    },
+                    "installationChauffageSolaire": {
+                        "type": "string"
+                    },
+                    "pacDedieeAProductionEcs": {
+                        "type": "string"
+                    },
+                    "noSiretAuditeur": {
+                        "type": "string"
+                    },
+                    "modeTransmission": {
+                        "type": "string"
+                    },
+                    "heureReceptionDeclaration": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "identifiantTransfert": {
+                        "type": "string"
+                    },
+                    "mntCreditImpot": {
+                        "type": "number"
+                    },
+                    "enrCreditImpot": {
+                        "type": "number"
+                    },
+                    "mstCiMovement": {
+                        "type": "number"
+                    },
+                    "noOrdre1": {
+                        "type": "number"
+                    },
+                    "noOrdre2": {
+                        "type": "number"
+                    },
+                    "codeEnregistrement1": {
+                        "type": "string"
+                    },
+                    "codeEnregistrement2": {
+                        "type": "string"
+                    },
+                    "compteRenduTraitement": {
+                        "type": "string"
+                    },
+                    "nbreMouvementsDetail": {
+                        "type": "number"
+                    },
+                    "codeProduit": {
+                        "type": "string"
+                    },
+                    "compteRenduTraitementCr": {
+                        "type": "string"
+                    },
+                    "initialMntEcoPret": {
+                        "type": "number"
+                    },
+                    "simbaDateTraitmentAller": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "treatmentTranactionId": {
+                        "type": "string"
+                    },
+                    "treatmentTranactionValid": {
+                        "type": "boolean"
+                    },
+                    "cr": {
+                        "$ref": "#/components/schemas/CaisseRegional"
+                    },
+                    "controlStatus": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ControlStatus"
+                        }
+                    },
+                    "statusCode": {
+                        "type": "string"
+                    },
+                    "fcurrentDate": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                }
+            },
+            "TreatmentDetailProperty": {
+                "type": "object",
+                "properties": {
+                    "entity": {
+                        "type": "string"
+                    },
+                    "stream": {
+                        "type": "string"
+                    },
+                    "treatmentDetailCode": {
+                        "type": "string"
+                    },
+                    "treatmentCode": {
+                        "type": "string"
+                    },
+                    "key": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    }
+                }
+            },
+            "FluxRequest": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "string"
+                    },
+                    "date": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
